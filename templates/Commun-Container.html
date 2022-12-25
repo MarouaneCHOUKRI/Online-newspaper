@@ -1,0 +1,64 @@
+<script data-ad-client="ca-pub-5790998682546101" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+<div style="height: 50px;">
+        
+</div>
+
+<div id="loader">
+</div>
+<div class="container" style="display:none;" id="myDiv" class="animate-bottom">
+
+    <div class="row">
+
+        <div id="newsResults">
+
+            {% for img, title, auth, src, time, url, desc in context %}
+                <div class="col m6">
+                    <div class="card medium hoverable">
+                        <div class="card-image">
+                            <img src="{{img}}" class="responsive-img">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator"><i class="material-icons right">more_vert</i></span>
+                            <h6 class="truncate">Title: <a href="{{url}}" title="{{title}}" target="_blank">{{title}}</a></h6>
+                            <p><b>Published</b>: {{time}} </p>
+                        </div>
+
+                        <div class="card-reveal">
+                            <span class="card-title"><i class="material-icons right">close</i></span>
+                            <p><b>Title</b>: {{title}}</p>
+                            <p><b>Description</b>: {{desc}}</p>
+                            <div style="text-align: center;"><a href="{{url}}" target="_blank" style="text-align: center;">+ Read more</a></div>
+                        </div>
+                    </div>
+                </div>
+
+            {% endfor %}
+
+
+        </div>
+
+    </div>
+    
+    <div style="margin-top: 40px; margin-bottom: 25px;">
+        <p style="text-align: center;">Made by @<b>Marouane Choukri</b></p>
+    </div>
+
+</div>
+
+<script>
+var myVar;
+
+function myFunction() {
+  myVar = setTimeout(showPage, 500);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
+
+<script src="./static/materialize.min.js"></script>
+
